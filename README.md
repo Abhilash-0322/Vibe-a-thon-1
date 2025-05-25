@@ -33,18 +33,23 @@ The **Real-Time Social Sentiment Copilot** is a dynamic Retrieval-Augmented Gene
 
 
 2. **Set Up Virtual Environment**
+    ```bash
     python -m venv .venv
     source .venv/bin/activate
 
 3. **Install Dependencies**
+    ```bash
     pip install -r requirements.txt
 
 4. **Configure Environment Variables**
+    ```bash
     cp .env.example .env
 
 5. **Edit .env with your API keys**
+    ```bash
     nano .env
 
 6. **Run The Application**
+    ```bash
     python app.py
 
