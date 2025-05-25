@@ -198,18 +198,21 @@ from langchain_groq import ChatGroq
 from langchain_core.prompts import PromptTemplate
 from langchain_core.runnables import RunnableSequence
 import random
+import os
+from dotenv import load_dotenv
 
+load_dotenv()
 # Configuration
-X_API_KEY = "OKSF9af94PSq75XvYuPRWq9Ag"
-X_API_SECRET = "hdIQzjEe6e1uXOSREqIy8Q6h0WiGduONlEcGzepxVO023JB1NM"
-X_ACCESS_TOKEN = "1211278825994145792-TywBGuuoHmqDMU4vuSmEfg6l36DgJC"
-X_ACCESS_TOKEN_SECRET = "VOfnYLe64IFaUvKkmjv1NWaVHRRRRuF6KkSiZrAG7VxLN"
-GROQ_API_KEY = "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"
-PRODUCT_QUERY = "iPhone 16"  # Product to search for
-TWEETS_DIR = "tweets_data"
-REDDIT_CLIENT_ID = "eSNwYwBx4vv9Tw0N1QKjaQ"  # Replace if using Reddit
-REDDIT_CLIENT_SECRET = "KzO7WO21rRi0CFO-M5zy9nYAMkBeVg"  # Replace if using Reddit
-REDDIT_USER_AGENT = "vibe-a-thon/1.0"
+X_API_KEY = os.getenv("X_API_KEY")
+X_API_SECRET = os.getenv("X_API_SECRET")
+X_ACCESS_TOKEN = os.getenv("X_ACCESS_TOKEN")
+X_ACCESS_TOKEN_SECRET = os.getenv("X_ACCESS_TOKEN_SECRET")
+GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+PRODUCT_QUERY = os.getenv("PRODUCT_QUERY")
+TWEETS_DIR = os.getenv("TWEETS_DIR")
+REDDIT_CLIENT_ID = os.getenv("REDDIT_CLIENT_ID")
+REDDIT_CLIENT_SECRET = os.getenv("REDDIT_CLIENT_SECRET")
+REDDIT_USER_AGENT = os.getenv("REDDIT_USER_AGENT")
 
 # Ensure tweets directory exists
 if not os.path.exists(TWEETS_DIR):
