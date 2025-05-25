@@ -9,9 +9,13 @@ import gradio as gr
 import plotly.express as px
 import pandas as pd
 import random
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
 
 # Configuration
-GROQ_API_KEY = "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"  # Your Groq API Key
+GROQ_API_KEY = os.getenv("GROQ_API_KEY")  # Your Groq API Key
 PRODUCT_QUERY = "iPhone 16"  # Product for context
 TWEETS_DIR = "tweets_data"  # Directory for storing tweets
 
