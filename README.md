@@ -31,3 +31,20 @@ The **Real-Time Social Sentiment Copilot** is a dynamic Retrieval-Augmented Gene
    git clone <repo-url> || unzip submission.zip
    cd Vibe-a-thon-1
 
+
+2. **Set Up Virtual Environment**
+    python -m venv .venv
+    source .venv/bin/activate
+
+3. **Install Dependencies**
+    pip install -r requirements.txt
+
+4. **Configure Environment Variables**
+    cp .env.example .env
+
+5. **Edit .env with your API keys**
+    nano .env
+
+6. **Run The Application**
+    python app.py
+

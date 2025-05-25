@@ -12,6 +12,7 @@ import os
 from dotenv import load_dotenv
 
 load_dotenv()
+
 # Configuration
 X_API_KEY = os.getenv("X_API_KEY")
 X_API_SECRET = os.getenv("X_API_SECRET")
