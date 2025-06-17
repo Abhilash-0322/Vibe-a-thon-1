@@ -1,0 +1,277 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="405pt" height="1294pt" viewBox="0.00 0.00 405.08 1294.40">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 1290.4)">
+<title>G</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-1290.4 401.08,-1290.4 401.08,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<polygon fill="lightgreen" stroke="black" points="279.82,-1286.4 225.82,-1286.4 225.82,-1250.4 279.82,-1250.4 279.82,-1286.4"/>
+<text text-anchor="middle" x="252.82" y="-1264.2" font-family="Times,serif" font-size="14.00">Start</text>
+</g>
+<!-- config -->
+<g id="node2" class="node">
+<title>config</title>
+<polygon fill="lightblue" stroke="black" points="262.86,-1213.4 152.78,-1213.4 152.78,-1171.8 262.86,-1171.8 262.86,-1213.4"/>
+<text text-anchor="middle" x="207.82" y="-1196.8" font-family="Times,serif" font-size="14.00">Configuration</text>
+<text text-anchor="middle" x="207.82" y="-1180" font-family="Times,serif" font-size="14.00">(Load Env Vars)</text>
+</g>
+<!-- start&#45;&gt;config -->
+<g id="edge1" class="edge">
+<title>start-&gt;config</title>
+<path fill="none" stroke="black" d="M242.15,-1249.91C237.36,-1242.04 231.56,-1232.53 226.1,-1223.58"/>
+<polygon fill="black" stroke="black" points="229.14,-1221.85 220.95,-1215.13 223.16,-1225.49 229.14,-1221.85"/>
+</g>
+<!-- simulate_stream -->
+<g id="node18" class="node">
+<title>simulate_stream</title>
+<polygon fill="lightcoral" stroke="black" points="351.28,-1153.8 242.35,-1153.8 242.35,-1112.2 351.28,-1112.2 351.28,-1153.8"/>
+<text text-anchor="middle" x="296.82" y="-1137.2" font-family="Times,serif" font-size="14.00">Simulate Stream</text>
+<text text-anchor="middle" x="296.82" y="-1120.4" font-family="Times,serif" font-size="14.00">(Every 10s)</text>
+</g>
+<!-- start&#45;&gt;simulate_stream -->
+<g id="edge20" class="edge">
+<title>start-&gt;simulate_stream</title>
+<path fill="none" stroke="black" d="M259.13,-1249.94C262.9,-1239.39 267.73,-1225.66 271.82,-1213.4 277.13,-1197.45 282.78,-1179.6 287.36,-1164.87"/>
+<polygon fill="black" stroke="black" points="290.57,-1166.33 290.18,-1155.74 283.89,-1164.26 290.57,-1166.33"/>
+</g>
+<!-- groq_init -->
+<g id="node3" class="node">
+<title>groq_init</title>
+<polygon fill="lightblue" stroke="black" points="264.12,-1094.2 101.52,-1094.2 101.52,-1052.6 264.12,-1052.6 264.12,-1094.2"/>
+<text text-anchor="middle" x="182.82" y="-1077.6" font-family="Times,serif" font-size="14.00">Initialize Groq LLM</text>
+<text text-anchor="middle" x="182.82" y="-1060.8" font-family="Times,serif" font-size="14.00">(Sentiment &amp; QA Chains)</text>
+</g>
+<!-- config&#45;&gt;groq_init -->
+<g id="edge2" class="edge">
+<title>config-&gt;groq_init</title>
+<path fill="none" stroke="black" d="M203.52,-1171.45C199.67,-1153.42 193.97,-1126.7 189.53,-1105.86"/>
+<polygon fill="black" stroke="black" points="192.97,-1105.21 187.46,-1096.16 186.12,-1106.67 192.97,-1105.21"/>
+</g>
+<!-- fetch_data -->
+<g id="node4" class="node">
+<title>fetch_data</title>
+<polygon fill="lightblue" stroke="black" points="240.82,-1015.6 97.27,-974 240.82,-932.4 384.36,-974 240.82,-1015.6"/>
+<text text-anchor="middle" x="240.82" y="-978.2" font-family="Times,serif" font-size="14.00">Fetch Data</text>
+<text text-anchor="middle" x="240.82" y="-961.4" font-family="Times,serif" font-size="14.00">(X API or Reddit API)</text>
+</g>
+<!-- groq_init&#45;&gt;fetch_data -->
+<g id="edge3" class="edge">
+<title>groq_init-&gt;fetch_data</title>
+<path fill="none" stroke="black" d="M194.84,-1052.22C200.48,-1042.74 207.45,-1031.03 214.25,-1019.62"/>
+<polygon fill="black" stroke="black" points="217.25,-1021.42 219.36,-1011.04 211.23,-1017.84 217.25,-1021.42"/>
+</g>
+<!-- x_api -->
+<g id="node5" class="node">
+<title>x_api</title>
+<polygon fill="lightblue" stroke="black" points="227.85,-879.6 117.78,-879.6 117.78,-838 227.85,-838 227.85,-879.6"/>
+<text text-anchor="middle" x="172.82" y="-863" font-family="Times,serif" font-size="14.00">X API</text>
+<text text-anchor="middle" x="172.82" y="-846.2" font-family="Times,serif" font-size="14.00">(fetch_x_tweets)</text>
+</g>
+<!-- fetch_data&#45;&gt;x_api -->
+<g id="edge4" class="edge">
+<title>fetch_data-&gt;x_api</title>
+<path fill="none" stroke="black" d="M219.86,-938.11C210.54,-922.59 199.68,-904.51 190.74,-889.63"/>
+<polygon fill="black" stroke="black" points="193.83,-887.98 185.68,-881.21 187.83,-891.59 193.83,-887.98"/>
+<text text-anchor="middle" x="227.33" y="-901.8" font-family="Times,serif" font-size="14.00">Primary</text>
+</g>
+<!-- reddit_api -->
+<g id="node6" class="node">
+<title>reddit_api</title>
+<polygon fill="lightblue" stroke="black" points="374.19,-879.6 245.45,-879.6 245.45,-838 374.19,-838 374.19,-879.6"/>
+<text text-anchor="middle" x="309.82" y="-863" font-family="Times,serif" font-size="14.00">Reddit API</text>
+<text text-anchor="middle" x="309.82" y="-846.2" font-family="Times,serif" font-size="14.00">(fetch_reddit_posts)</text>
+</g>
+<!-- fetch_data&#45;&gt;reddit_api -->
+<g id="edge5" class="edge">
+<title>fetch_data-&gt;reddit_api</title>
+<path fill="none" stroke="black" d="M262.08,-938.11C271.54,-922.59 282.57,-904.51 291.63,-889.63"/>
+<polygon fill="black" stroke="black" points="294.55,-891.57 296.77,-881.21 288.58,-887.92 294.55,-891.57"/>
+<text text-anchor="middle" x="309.63" y="-901.8" font-family="Times,serif" font-size="14.00">Fallback</text>
+</g>
+<!-- sentiment_chain -->
+<g id="node8" class="node">
+<title>sentiment_chain</title>
+<polygon fill="lightblue" stroke="black" points="303.45,-801 178.18,-801 178.18,-759.4 303.45,-759.4 303.45,-801"/>
+<text text-anchor="middle" x="240.82" y="-784.4" font-family="Times,serif" font-size="14.00">Sentiment Analysis</text>
+<text text-anchor="middle" x="240.82" y="-767.6" font-family="Times,serif" font-size="14.00">(sentiment_chain)</text>
+</g>
+<!-- x_api&#45;&gt;sentiment_chain -->
+<g id="edge6" class="edge">
+<title>x_api-&gt;sentiment_chain</title>
+<path fill="none" stroke="black" d="M190.68,-837.67C198.2,-829.21 207.08,-819.2 215.27,-809.98"/>
+<polygon fill="black" stroke="black" points="217.81,-812.39 221.83,-802.59 212.57,-807.74 217.81,-812.39"/>
+</g>
+<!-- reddit_api&#45;&gt;sentiment_chain -->
+<g id="edge7" class="edge">
+<title>reddit_api-&gt;sentiment_chain</title>
+<path fill="none" stroke="black" d="M291.69,-837.67C284.06,-829.21 275.05,-819.2 266.74,-809.98"/>
+<polygon fill="black" stroke="black" points="269.37,-807.67 260.08,-802.58 264.17,-812.35 269.37,-807.67"/>
+</g>
+<!-- json_files -->
+<g id="node7" class="node">
+<title>json_files</title>
+<path fill="lightyellow" stroke="black" d="M296.64,-684.6C296.64,-687.47 271.62,-689.8 240.82,-689.8 210.02,-689.8 185,-687.47 185,-684.6 185,-684.6 185,-637.8 185,-637.8 185,-634.93 210.02,-632.6 240.82,-632.6 271.62,-632.6 296.64,-634.93 296.64,-637.8 296.64,-637.8 296.64,-684.6 296.64,-684.6"/>
+<path fill="none" stroke="black" d="M296.64,-684.6C296.64,-681.73 271.62,-679.4 240.82,-679.4 210.02,-679.4 185,-681.73 185,-684.6"/>
+<text text-anchor="middle" x="240.82" y="-665.4" font-family="Times,serif" font-size="14.00">JSON Files</text>
+<text text-anchor="middle" x="240.82" y="-648.6" font-family="Times,serif" font-size="14.00">(TWEETS_DIR)</text>
+</g>
+<!-- pathway_input -->
+<g id="node9" class="node">
+<title>pathway_input</title>
+<polygon fill="lightblue" stroke="black" points="238.83,-579.8 140.81,-579.8 140.81,-538.2 238.83,-538.2 238.83,-579.8"/>
+<text text-anchor="middle" x="189.82" y="-563.2" font-family="Times,serif" font-size="14.00">Pathway Input</text>
+<text text-anchor="middle" x="189.82" y="-546.4" font-family="Times,serif" font-size="14.00">(pw.io.fs.read)</text>
+</g>
+<!-- json_files&#45;&gt;pathway_input -->
+<g id="edge9" class="edge">
+<title>json_files-&gt;pathway_input</title>
+<path fill="none" stroke="black" d="M211.73,-632.26C207.27,-626.78 203.14,-620.79 200.1,-614.6 196.62,-607.53 194.31,-599.42 192.78,-591.64"/>
+<polygon fill="black" stroke="black" points="196.25,-591.12 191.25,-581.78 189.33,-592.2 196.25,-591.12"/>
+<text text-anchor="middle" x="232.96" y="-602" font-family="Times,serif" font-size="14.00">Read JSON</text>
+</g>
+<!-- sentiment_dist -->
+<g id="node16" class="node">
+<title>sentiment_dist</title>
+<polygon fill="lightblue" stroke="black" points="377.53,-520.2 202.11,-520.2 202.11,-478.6 377.53,-478.6 377.53,-520.2"/>
+<text text-anchor="middle" x="289.82" y="-503.6" font-family="Times,serif" font-size="14.00">Sentiment Distribution</text>
+<text text-anchor="middle" x="289.82" y="-486.8" font-family="Times,serif" font-size="14.00">(get_sentiment_distribution)</text>
+</g>
+<!-- json_files&#45;&gt;sentiment_dist -->
+<g id="edge15" class="edge">
+<title>json_files-&gt;sentiment_dist</title>
+<path fill="none" stroke="black" d="M257.76,-632.35C260.76,-626.62 263.63,-620.53 265.82,-614.6 275.87,-587.42 282.19,-554.95 285.8,-531.6"/>
+<polygon fill="black" stroke="black" points="289.25,-532.19 287.23,-521.79 282.32,-531.18 289.25,-532.19"/>
+<text text-anchor="middle" x="303.72" y="-602" font-family="Times,serif" font-size="14.00">Read JSON</text>
+</g>
+<!-- sentiment_chain&#45;&gt;json_files -->
+<g id="edge8" class="edge">
+<title>sentiment_chain-&gt;json_files</title>
+<path fill="none" stroke="black" d="M240.82,-759.09C240.82,-743.21 240.82,-720.59 240.82,-701.19"/>
+<polygon fill="black" stroke="black" points="244.32,-701.44 240.82,-691.44 237.32,-701.44 244.32,-701.44"/>
+<text text-anchor="middle" x="318.95" y="-728.8" font-family="Times,serif" font-size="14.00">Write JSON</text>
+<text text-anchor="middle" x="318.95" y="-712" font-family="Times,serif" font-size="14.00">(text, created_at, sentiment)</text>
+</g>
+<!-- schema -->
+<g id="node10" class="node">
+<title>schema</title>
+<polygon fill="lightblue" stroke="black" points="214.04,-460.6 129.6,-460.6 129.6,-424.6 214.04,-424.6 214.04,-460.6"/>
+<text text-anchor="middle" x="171.82" y="-438.4" font-family="Times,serif" font-size="14.00">PostSchema</text>
+</g>
+<!-- pathway_input&#45;&gt;schema -->
+<g id="edge10" class="edge">
+<title>pathway_input-&gt;schema</title>
+<path fill="none" stroke="black" d="M186.64,-537.81C183.77,-519.58 179.52,-492.56 176.31,-472.12"/>
+<polygon fill="black" stroke="black" points="179.8,-471.8 174.79,-462.46 172.88,-472.89 179.8,-471.8"/>
+</g>
+<!-- score_udf -->
+<g id="node11" class="node">
+<title>score_udf</title>
+<polygon fill="lightblue" stroke="black" points="230.61,-387.6 89.03,-387.6 89.03,-346 230.61,-346 230.61,-387.6"/>
+<text text-anchor="middle" x="159.82" y="-371" font-family="Times,serif" font-size="14.00">Compute Score</text>
+<text text-anchor="middle" x="159.82" y="-354.2" font-family="Times,serif" font-size="14.00">(compute_score UDF)</text>
+</g>
+<!-- schema&#45;&gt;score_udf -->
+<g id="edge11" class="edge">
+<title>schema-&gt;score_udf</title>
+<path fill="none" stroke="black" d="M168.97,-424.11C167.76,-416.67 166.31,-407.75 164.93,-399.23"/>
+<polygon fill="black" stroke="black" points="168.41,-398.84 163.35,-389.53 161.5,-399.96 168.41,-398.84"/>
+</g>
+<!-- retrieve_posts -->
+<g id="node12" class="node">
+<title>retrieve_posts</title>
+<polygon fill="lightblue" stroke="black" points="218.09,-309 95.55,-309 95.55,-267.4 218.09,-267.4 218.09,-309"/>
+<text text-anchor="middle" x="156.82" y="-292.4" font-family="Times,serif" font-size="14.00">Retrieve Top Posts</text>
+<text text-anchor="middle" x="156.82" y="-275.6" font-family="Times,serif" font-size="14.00">(retrieve_posts)</text>
+</g>
+<!-- score_udf&#45;&gt;retrieve_posts -->
+<g id="edge12" class="edge">
+<title>score_udf-&gt;retrieve_posts</title>
+<path fill="none" stroke="black" d="M159.03,-345.67C158.73,-338.08 158.39,-329.25 158.06,-320.86"/>
+<polygon fill="black" stroke="black" points="161.56,-320.83 157.67,-310.97 154.56,-321.1 161.56,-320.83"/>
+</g>
+<!-- qa_chain -->
+<g id="node13" class="node">
+<title>qa_chain</title>
+<polygon fill="lightblue" stroke="black" points="194.75,-230.4 118.89,-230.4 118.89,-188.8 194.75,-188.8 194.75,-230.4"/>
+<text text-anchor="middle" x="156.82" y="-213.8" font-family="Times,serif" font-size="14.00">QA Chain</text>
+<text text-anchor="middle" x="156.82" y="-197" font-family="Times,serif" font-size="14.00">(qa_chain)</text>
+</g>
+<!-- retrieve_posts&#45;&gt;qa_chain -->
+<g id="edge13" class="edge">
+<title>retrieve_posts-&gt;qa_chain</title>
+<path fill="none" stroke="black" d="M156.82,-267.07C156.82,-259.48 156.82,-250.65 156.82,-242.26"/>
+<polygon fill="black" stroke="black" points="160.32,-242.37 156.82,-232.37 153.32,-242.37 160.32,-242.37"/>
+</g>
+<!-- query_loop -->
+<g id="node14" class="node">
+<title>query_loop</title>
+<polygon fill="lightblue" stroke="black" points="201.36,-136 112.27,-136 112.27,-94.4 201.36,-94.4 201.36,-136"/>
+<text text-anchor="middle" x="156.82" y="-119.4" font-family="Times,serif" font-size="14.00">Query Loop</text>
+<text text-anchor="middle" x="156.82" y="-102.6" font-family="Times,serif" font-size="14.00">(query_loop)</text>
+</g>
+<!-- qa_chain&#45;&gt;query_loop -->
+<g id="edge14" class="edge">
+<title>qa_chain-&gt;query_loop</title>
+<path fill="none" stroke="black" d="M156.82,-188.55C156.82,-176.56 156.82,-161.07 156.82,-147.5"/>
+<polygon fill="black" stroke="black" points="160.32,-147.72 156.82,-137.72 153.32,-147.72 160.32,-147.72"/>
+</g>
+<!-- user_query -->
+<g id="node15" class="node">
+<title>user_query</title>
+<ellipse fill="lightpink" stroke="black" cx="55.82" cy="-20.8" rx="55.82" ry="18"/>
+<text text-anchor="middle" x="55.82" y="-16.6" font-family="Times,serif" font-size="14.00">User Query</text>
+</g>
+<!-- query_loop&#45;&gt;user_query -->
+<g id="edge16" class="edge">
+<title>query_loop-&gt;user_query</title>
+<path fill="none" stroke="black" d="M134.9,-94.15C119.29,-79.87 98.24,-60.61 81.79,-45.56"/>
+<polygon fill="black" stroke="black" points="84.51,-43.31 74.77,-39.14 79.79,-48.47 84.51,-43.31"/>
+</g>
+<!-- display_response -->
+<g id="node17" class="node">
+<title>display_response</title>
+<polygon fill="lightblue" stroke="black" points="379.56,-41.6 202.07,-41.6 202.07,0 379.56,0 379.56,-41.6"/>
+<text text-anchor="middle" x="290.82" y="-25" font-family="Times,serif" font-size="14.00">Display Response</text>
+<text text-anchor="middle" x="290.82" y="-8.2" font-family="Times,serif" font-size="14.00">(Response + Sentiment Dist)</text>
+</g>
+<!-- query_loop&#45;&gt;display_response -->
+<g id="edge18" class="edge">
+<title>query_loop-&gt;display_response</title>
+<path fill="none" stroke="black" d="M186.22,-93.92C205.6,-80.56 231.17,-62.93 252.19,-48.44"/>
+<polygon fill="black" stroke="black" points="253.99,-51.45 260.23,-42.89 250.01,-45.68 253.99,-51.45"/>
+</g>
+<!-- end -->
+<g id="node19" class="node">
+<title>end</title>
+<polygon fill="lightgreen" stroke="black" points="183.82,-38.8 129.82,-38.8 129.82,-2.8 183.82,-2.8 183.82,-38.8"/>
+<text text-anchor="middle" x="156.82" y="-16.6" font-family="Times,serif" font-size="14.00">End</text>
+</g>
+<!-- query_loop&#45;&gt;end -->
+<g id="edge22" class="edge">
+<title>query_loop-&gt;end</title>
+<path fill="none" stroke="black" d="M156.82,-94.15C156.82,-81.3 156.82,-64.41 156.82,-50.19"/>
+<polygon fill="black" stroke="black" points="160.32,-50.53 156.82,-40.53 153.32,-50.53 160.32,-50.53"/>
+<text text-anchor="middle" x="169.26" y="-63.8" font-family="Times,serif" font-size="14.00">Quit</text>
+</g>
+<!-- user_query&#45;&gt;retrieve_posts -->
+<g id="edge17" class="edge">
+<title>user_query-&gt;retrieve_posts</title>
+<path fill="none" stroke="black" d="M57.72,-39.19C62.32,-76.17 76.21,-164.61 109.82,-230.4 114.82,-240.19 121.76,-249.81 128.77,-258.27"/>
+<polygon fill="black" stroke="black" points="126.12,-260.56 135.33,-265.8 131.4,-255.96 126.12,-260.56"/>
+<text text-anchor="middle" x="102.85" y="-158.2" font-family="Times,serif" font-size="14.00">Query</text>
+</g>
+<!-- sentiment_dist&#45;&gt;display_response -->
+<g id="edge19" class="edge">
+<title>sentiment_dist-&gt;display_response</title>
+<path fill="none" stroke="black" d="M289.82,-478.34C289.82,-459.75 289.82,-431.3 289.82,-406.6 289.82,-406.6 289.82,-406.6 289.82,-114.2 289.82,-94 290.06,-71.31 290.31,-53.47"/>
+<polygon fill="black" stroke="black" points="293.8,-53.55 290.45,-43.5 286.81,-53.45 293.8,-53.55"/>
+</g>
+<!-- simulate_stream&#45;&gt;fetch_data -->
+<g id="edge21" class="edge">
+<title>simulate_stream-&gt;fetch_data</title>
+<path fill="none" stroke="black" d="M291.33,-1111.92C286.78,-1095.76 279.92,-1072.54 272.82,-1052.6 269.26,-1042.62 265.14,-1032.05 261.07,-1022.03"/>
+<polygon fill="black" stroke="black" points="264.32,-1020.74 257.27,-1012.83 257.85,-1023.4 264.32,-1020.74"/>
+<text text-anchor="middle" x="314.37" y="-1069.2" font-family="Times,serif" font-size="14.00">Every 10s</text>
+</g>
+</g>
+</svg>
