@@ -25,7 +25,7 @@ The **Real-Time Social Sentiment Copilot** is a dynamic Retrieval-Augmented Gene
   - **X API Keys** (optional): Consumer Key, Consumer Secret, Access Token, Access Token Secret from `https://developer.x.com`.
   - **Reddit API Keys** (fallback): Client ID, Client Secret from `https://www.reddit.com/prefs/apps`.
 
-## Diagram
+## Flow
 ![alt text](<graphviz (1).svg>)
 
 ### Installation
